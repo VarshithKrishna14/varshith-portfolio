@@ -45,9 +45,9 @@ function Skills() {
   }, {});
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 py-16 w-full">
+    <div className="w-full flex flex-col items-center px-2 sm:px-6 py-8 sm:py-16">
       <motion.h2
-        className="text-2xl sm:text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200"
+        className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -59,13 +59,13 @@ function Skills() {
         {Object.entries(skillsByCategory).map(([category, categorySkills], categoryIndex) => (
           <motion.div
             key={category}
-            className="mb-12"
+            className="mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-gray-300">{category}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-300">{category}</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
               {categorySkills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -74,8 +74,8 @@ function Skills() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
                 >
-                  <div className="text-2xl sm:text-3xl mb-2">{skill.icon}</div>
-                  <span className="text-gray-300 font-medium text-sm sm:text-base">{skill.name}</span>
+                  <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">{skill.icon}</div>
+                  <span className="text-sm sm:text-base text-gray-300 font-medium">{skill.name}</span>
                 </motion.div>
               ))}
             </div>

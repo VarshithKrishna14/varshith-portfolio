@@ -64,9 +64,9 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 py-16 w-full">
+    <div className="w-full flex flex-col items-center px-2 sm:px-6 py-8 sm:py-16">
       <motion.h2
-        className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
+        className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -80,11 +80,11 @@ function Contact() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h3 className="text-2xl font-bold mb-6 text-blue-300 text-center">Send Me a Message</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-blue-300 text-center">Send Me a Message</h3>
         
         {submitSuccess && (
           <motion.div 
-            className="bg-green-900/30 border border-green-500/30 text-green-300 p-4 rounded-md mb-6"
+            className="bg-green-900/30 border border-green-500/30 text-green-300 p-3 sm:p-4 rounded-md mb-4 sm:mb-6 text-sm sm:text-base"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -94,7 +94,7 @@ function Contact() {
         
         {submitError && (
           <motion.div 
-            className="bg-red-900/30 border border-red-500/30 text-red-300 p-4 rounded-md mb-6"
+            className="bg-red-900/30 border border-red-500/30 text-red-300 p-3 sm:p-4 rounded-md mb-4 sm:mb-6 text-sm sm:text-base"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -102,37 +102,36 @@ function Contact() {
           </motion.div>
         )}
         
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full bg-[#0a0a1a] border border-blue-900/30 rounded-md py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-              placeholder="Your Name"
-            />
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm sm:text-base text-gray-300 mb-1 sm:mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full bg-[#0a1020]/50 border border-blue-900/30 rounded-md px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm sm:text-base text-gray-300 mb-1 sm:mb-2">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full bg-[#0a1020]/50 border border-blue-900/30 rounded-md px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full bg-[#0a0a1a] border border-blue-900/30 rounded-md py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-              placeholder="Your Email"
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
+            <label htmlFor="subject" className="block text-sm sm:text-base text-gray-300 mb-1 sm:mb-2">Subject</label>
             <input
               type="text"
               id="subject"
@@ -140,49 +139,39 @@ function Contact() {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full bg-[#0a0a1a] border border-blue-900/30 rounded-md py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-              placeholder="Subject"
+              className="w-full bg-[#0a1020]/50 border border-blue-900/30 rounded-md px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+            <label htmlFor="message" className="block text-sm sm:text-base text-gray-300 mb-1 sm:mb-2">Message</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              rows="5"
-              className="w-full bg-[#0a0a1a] border border-blue-900/30 rounded-md py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-              placeholder="Your Message"
+              rows="4"
+              className="w-full bg-[#0a1020]/50 border border-blue-900/30 rounded-md px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             ></textarea>
           </div>
           
-          <motion.button
-            type="submit"
-            disabled={isSubmitting}
-            className={`w-full flex items-center justify-center space-x-2 py-3 px-6 rounded-md text-white font-medium transition-all duration-300 ${
-              isSubmitting ? 'bg-blue-700 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            {isSubmitting ? (
-              <>
-                <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? (
                 <span>Sending...</span>
-              </>
-            ) : (
-              <>
-                <FaPaperPlane />
-                <span>Send Message</span>
-              </>
-            )}
-          </motion.button>
+              ) : (
+                <>
+                  <FaPaperPlane />
+                  <span>Send Message</span>
+                </>
+              )}
+            </button>
+          </div>
         </form>
       </motion.div>
     </div>

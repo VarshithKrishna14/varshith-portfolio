@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa'; // for mobile toggle icons
 import Hero from "./components/Hero";
@@ -99,32 +99,32 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="h-screen bg-gradient-to-b from-black via-gray-950 to-[#1a1a2e] overflow-hidden w-full">
+      <section id="hero" className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-[#1a1a2e] overflow-hidden w-full">
         <Hero />
       </section>
 
       {/* About Section */}
-      <section id="about" className="h-screen bg-gradient-to-b from-[#1a1a2e] via-[#1e1e3a] to-[#1a1a4a] px-4 sm:px-6 py-12 overflow-hidden w-full">
+      <section id="about" className="min-h-screen bg-gradient-to-b from-[#1a1a2e] via-[#1e1e3a] to-[#1a1a4a] px-4 sm:px-6 py-12 sm:py-16 overflow-hidden w-full">
         <About />
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="h-screen bg-gradient-to-b from-[#1a1a4a] via-[#1a1a5a] to-[#0f1a2f] px-4 sm:px-6 py-12 overflow-hidden w-full">
+      <section id="skills" className="min-h-screen bg-gradient-to-b from-[#1a1a4a] via-[#1a1a5a] to-[#0f1a2f] px-4 sm:px-6 py-12 sm:py-16 overflow-hidden w-full">
         <Skills />
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen bg-gradient-to-b from-[#0f1a2f] via-[#0a1525] to-[#0a1020] px-4 sm:px-6 py-12 overflow-hidden w-full">
+      <section id="projects" className="min-h-screen bg-gradient-to-b from-[#0f1a2f] via-[#0a1525] to-[#0a1020] px-4 sm:px-6 py-12 sm:py-16 overflow-hidden w-full">
         <Projects />
       </section>
 
       {/* Blogs Section */}
-      <section id="blogs" className="h-screen bg-gradient-to-b from-[#0a1020] via-[#0a1525] to-[#1a1a4a] px-4 sm:px-6 py-12 overflow-hidden w-full">
+      <section id="blogs" className="min-h-screen bg-gradient-to-b from-[#0a1020] via-[#0a1525] to-[#1a1a4a] px-4 sm:px-6 py-12 sm:py-16 overflow-hidden w-full">
         <Blogs />
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="h-screen bg-gradient-to-b from-[#0a1020] via-[#050a15] to-black px-4 sm:px-6 py-12 overflow-hidden w-full">
+      <section id="contact" className="min-h-screen bg-gradient-to-b from-[#0a1020] via-[#050a15] to-black px-4 sm:px-6 py-12 sm:py-16 overflow-hidden w-full">
         <Contact />
       </section>
 

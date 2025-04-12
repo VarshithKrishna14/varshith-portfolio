@@ -35,9 +35,9 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 py-16 w-full">
+    <div className="w-full flex flex-col items-center px-2 sm:px-6 py-8 sm:py-16">
       <motion.h2
-        className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
+        className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -45,7 +45,7 @@ function Projects() {
         My Projects
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 w-full max-w-7xl">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -61,7 +61,7 @@ function Projects() {
           >
             <div className="h-full flex flex-col">
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-200 group-hover:text-blue-300 transition-colors duration-300">{project.name}</h3>
-              <p className="text-base sm:text-lg mb-4 text-gray-400 flex-grow">{project.description}</p>
+              <p className="text-sm sm:text-lg mb-4 text-gray-400 flex-grow">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
@@ -69,7 +69,7 @@ function Projects() {
                 className="text-blue-300 hover:text-blue-200 transition-colors duration-300 inline-flex items-center group-hover:translate-x-1 transition-transform duration-300"
               >
                 View Project
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </a>
