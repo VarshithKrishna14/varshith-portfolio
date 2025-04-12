@@ -64,7 +64,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-16">
+    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 py-16 w-full">
       <motion.h2
         className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
         initial={{ opacity: 0, y: -50 }}
@@ -75,7 +75,7 @@ function Contact() {
       </motion.h2>
 
       <motion.div
-        className="w-full max-w-2xl bg-[#1a1a2e]/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-blue-900/20"
+        className="w-full max-w-2xl bg-[#1a1a2e]/50 backdrop-blur-sm p-4 sm:p-8 rounded-lg shadow-lg border border-blue-900/20"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

@@ -11,7 +11,7 @@ function Hero() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center text-center text-white">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center text-center text-white px-4 sm:px-6">
       {/* Hidden resume download link */}
       <a 
         id="resume-download" 
@@ -23,7 +23,7 @@ function Hero() {
       </a>
       
       <motion.h1 
-        className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-blue-100"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-blue-100"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ function Hero() {
         Varshith Krishna
       </motion.h1>
       <motion.p 
-        className="text-2xl mb-8 text-gray-300"
+        className="text-xl sm:text-2xl mb-8 text-gray-300 px-4"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -40,7 +40,7 @@ function Hero() {
       </motion.p>
 
       <motion.div 
-        className="flex gap-6 text-3xl mb-8"
+        className="flex gap-6 text-2xl sm:text-3xl mb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -58,7 +58,7 @@ function Hero() {
 
       <motion.button
         onClick={handleResumeDownload}
-        className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md transition-colors duration-300"
+        className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-3 rounded-md transition-colors duration-300"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.9 }}

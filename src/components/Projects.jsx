@@ -35,9 +35,9 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-16">
+    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 py-16 w-full">
       <motion.h2
-        className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
+        className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-200 pt-4"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -45,11 +45,11 @@ function Projects() {
         My Projects
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#1a1a2e]/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-blue-900/20 hover:border-blue-700/30 transition-all duration-300 group"
+            className="bg-[#1a1a2e]/50 backdrop-blur-sm p-4 sm:p-6 rounded-lg shadow-lg border border-blue-900/20 hover:border-blue-700/30 transition-all duration-300 group"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -60,8 +60,8 @@ function Projects() {
             }}
           >
             <div className="h-full flex flex-col">
-              <h3 className="text-2xl font-bold mb-2 text-gray-200 group-hover:text-blue-300 transition-colors duration-300">{project.name}</h3>
-              <p className="text-lg mb-4 text-gray-400 flex-grow">{project.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-200 group-hover:text-blue-300 transition-colors duration-300">{project.name}</h3>
+              <p className="text-base sm:text-lg mb-4 text-gray-400 flex-grow">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
