@@ -4,6 +4,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
 
 function App() {
   return (
@@ -45,6 +46,14 @@ function App() {
               Projects
             </Link>
             <Link 
+              to="blogs" 
+              smooth={true} 
+              duration={500} 
+              className="cursor-pointer hover:text-indigo-400 transition-colors duration-300"
+            >
+              Blogs
+            </Link>
+            <Link 
               to="contact" 
               smooth={true} 
               duration={500} 
@@ -74,6 +83,11 @@ function App() {
       {/* Projects Section - Midnight Blue to Darker Blue */}
       <section id="projects" className="min-h-screen bg-gradient-to-b from-[#0f1a2f] via-[#0a1525] to-[#0a1020] px-6 py-12">
         <Projects />
+      </section>
+
+      {/* Blogs Section - Darker Blue to Deep Indigo */}
+      <section id="blogs" className="min-h-screen bg-gradient-to-b from-[#0a1020] via-[#0a1525] to-[#1a1a4a] px-6 py-12">
+        <Blogs />
       </section>
 
       {/* Contact Section - Darker Blue to Black */}
