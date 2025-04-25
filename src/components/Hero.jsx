@@ -15,7 +15,7 @@ function Hero() {
       {/* Hidden resume download link */}
       <a 
         id="resume-download" 
-        href="https://drive.google.com/file/d/1hMtEUK6VJ57UxGNzUHkkSKl7J1N0VhsM/view?usp=drive_link" 
+        href="https://drive.google.com/file/d/1vlN4cuCTxckn7oNBqK1L5hfnOjYrRPOA/view?usp=drive_link" 
         download 
         className="hidden"
       >
