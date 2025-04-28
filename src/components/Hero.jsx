@@ -13,15 +13,6 @@ function Hero() {
   return (
     <div className="w-full min-h-screen flex flex-col justify-center items-center text-center text-white">
       {/* Hidden resume download link */}
-      <a 
-        id="resume-download" 
-        href="https://drive.google.com/file/d/1vlN4cuCTxckn7oNBqK1L5hfnOjYrRPOA/view?usp=drive_link" 
-        download 
-        className="hidden"
-      >
-        Download Resume
-      </a>
-      
       <motion.h1 
         className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-blue-100"
         initial={{ opacity: 0, y: -50 }}
@@ -56,16 +47,6 @@ function Hero() {
         </a>
       </motion.div>
 
-      <motion.button
-        onClick={handleResumeDownload}
-        className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md transition-colors duration-300"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-      >
-        <FaDownload />
-        <span>Get My Resume</span>
-      </motion.button>
     </div>
   );
 }
